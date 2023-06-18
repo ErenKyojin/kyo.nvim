@@ -84,18 +84,18 @@ local theme = lush(function(injected_functions)
     -- SignColumn   { }, -- Column where |signs| are displayed
     -- IncSearch    { }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     -- Substitute   { }, -- |:substitute| replacement text highlighting
-    LineNr       { bg = "#AD7ECA", fg = "#31114E"}, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    LineNr       { bg = "#AD7ECA", fg = "#31114E", gui = "bold"}, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     CursorLineNr { fg = "#fec44e" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-    -- MatchParen   { }, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+    MatchParen   { fg = "#29EDD7", bg = "#2D9589"}, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     -- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
     -- MsgArea      { }, -- Area for messages and cmdline
     -- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     -- MoreMsg      { }, -- |more-prompt|
-    -- NonText      { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+    NonText      { fg = "#623e80" }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal       { bg = "#31114E", fg = "#AAAAAA"}, -- Normal text
     -- NormalFloat  { }, -- Normal text in floating windows.
     -- NormalNC     { }, -- normal text in non-current windows
-    -- Pmenu        { }, -- Popup menu: Normal item.
+    Pmenu        { bg = "#524cd4" }, -- Popup menu: Normal item.
     -- PmenuSel     { }, -- Popup menu: Selected item.
     -- PmenuSbar    { }, -- Popup menu: Scrollbar.
     -- PmenuThumb   { }, -- Popup menu: Thumb of the scrollbar.
@@ -129,7 +129,7 @@ local theme = lush(function(injected_functions)
     -- Uncomment and edit if you want more specific syntax highlighting.
     Comment        { fg = "#524Cd4" }, -- Any comment
 
-    -- Constant       { }, -- (*) Any constant
+    Constant       { fg = "#DCB1FC" }, -- (*) Any constant
     -- String         { }, --   A string constant: "this is a string"
     -- Character      { }, --   A character constant: 'c', '\n'
     -- Number         { }, --   A number constant: 234, 0xff
@@ -139,7 +139,7 @@ local theme = lush(function(injected_functions)
     -- Identifier     { }, -- (*) Any variable name
     -- Function       { }, --   Function name (also: methods for classes)
 
-    -- Statement      { }, -- (*) Any statement
+    Statement      { fg = "#F5c33b", gui="bold" }, -- (*) Any statement
     -- Conditional    { }, --   if, then, else, endif, switch, etc.
     -- Repeat         { }, --   for, do, while, etc.
     -- Label          { }, --   case, default, etc.
@@ -153,7 +153,7 @@ local theme = lush(function(injected_functions)
     -- Macro          { }, --   Same as Define
     -- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
 
-    -- Type           { }, -- (*) int, long, char, etc.
+    Type           { fg = "#00C9AF", gui="bold" }, -- (*) int, long, char, etc.
     -- StorageClass   { }, --   static, register, volatile, etc.
     -- Structure      { }, --   struct, union, enum, etc.
     -- Typedef        { }, --   A typedef
